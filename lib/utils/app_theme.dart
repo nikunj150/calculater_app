@@ -7,5 +7,5 @@ ThemeData lightTheme = ThemeData(
 ThemeData darkTheme = ThemeData(
   useMaterial3: true,
   brightness: Brightness.dark,
-  textTheme: TextTheme(bodyMedium: TextStyle(color: Colors.white)),
+  textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.white)),
 );

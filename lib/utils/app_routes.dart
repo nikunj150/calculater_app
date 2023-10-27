@@ -3,5 +3,5 @@ import 'package:flutter/cupertino.dart';
 
 Map<String,WidgetBuilder> screen_routes={
 
-  '/':(context) => CalculatorScreen(),
+  '/':(context) => const CalculatorScreen(),
 };

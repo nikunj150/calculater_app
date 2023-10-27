@@ -12,7 +12,6 @@ void main()
       create: (context) => ThemeProvider(),
       child: Consumer<ThemeProvider>(
         builder: (context, value, child) => MaterialApp(
-
           theme: value.isLight?lightTheme:darkTheme,
           debugShowCheckedModeBanner: false,
           routes: screen_routes,
