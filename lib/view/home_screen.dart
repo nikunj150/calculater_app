@@ -42,41 +42,47 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
             SizedBox(
               height: 40,
             ),
-            Container(
-              height: MediaQuery.of(context).size.height * 0.60,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                color: Colors.black12,
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(8), topRight: Radius.circular(8)),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: GridView.builder(
-                  itemCount: buttons.length,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 4,
-                      crossAxisSpacing: 10,
-                      mainAxisSpacing: 10,
-                      mainAxisExtent: 90),
-                  itemBuilder: (context, index) {
-                    return Container(
-                      height: 20,
-                      width: 20,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                        color: Colors.white10,
-                      ),
-                      child: Center(
-                        child: Text(
-                          "${buttons[index]}",
-                          style: TextStyle(fontSize: 27),
-                        ),
-                      ),
-                    );
-                  },
+            Stack(
+              alignment: Alignment.bottomRight,
+              children: [
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.60,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    color: Colors.black12,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(8),
+                        topRight: Radius.circular(8)),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: GridView.builder(
+                      itemCount: buttons.length,
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 4,
+                          crossAxisSpacing: 10,
+                          mainAxisSpacing: 10,
+                          mainAxisExtent: 90),
+                      itemBuilder: (context, index) {
+                        return Container(
+                          height: 20,
+                          width: 20,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.white10,
+                          ),
+                          child: Center(
+                            child: Text(
+                              "${buttons[index]}",
+                              style: TextStyle(fontSize: 27),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
           ],
         ),
@@ -84,3 +90,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     );
   }
 }
+/*
+* ${buttons[index]}
+* */

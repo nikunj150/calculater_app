@@ -1,9 +1,7 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
-List<String> buttons =[
-  "C",
+List<String>buttons =[
+ "C",
   "%",
   "÷",
   "×",
@@ -22,5 +20,5 @@ List<String> buttons =[
   "0",
   ".",
   "00",
-  "=",
+  "="
 ];
